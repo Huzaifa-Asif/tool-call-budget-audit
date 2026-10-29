@@ -1,0 +1,15 @@
+name: Bug report
+description: Report reproducible tool-call budget behavior
+body:
+  - type: input
+    id: version
+    attributes: { label: Version }
+    validations: { required: true }
+  - type: textarea
+    id: reproduction
+    attributes: { label: Minimal reproduction, description: Remove secrets and event payloads. }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: Expected and actual behavior }
+    validations: { required: true }

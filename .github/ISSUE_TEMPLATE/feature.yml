@@ -1,0 +1,11 @@
+name: Feature request
+description: Propose a bounded sequence-audit improvement
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Problem and evidence }
+    validations: { required: true }
+  - type: textarea
+    id: alternatives
+    attributes: { label: Alternatives considered }
+    validations: { required: true }

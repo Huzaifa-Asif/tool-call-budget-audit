@@ -1,0 +1,26 @@
+{
+  "name": "tool-call-budget-audit",
+  "version": "1.0.0",
+  "description": "Audit tool-call batch count, argument bytes, completeness, and output-budget risk without retaining payloads.",
+  "type": "module",
+  "main": "./src/index.cjs",
+  "module": "./src/index.mjs",
+  "types": "./src/index.d.ts",
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.mjs", "require": "./src/index.cjs" } },
+  "files": ["src/", "examples/", "README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "SECURITY.md", "CODE_OF_CONDUCT.md"],
+  "scripts": {
+    "build": "node scripts/verify-package.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test --experimental-test-coverage",
+    "example": "node examples/audit-batch.mjs",
+    "check": "npm run lint && npm run build && npm test && npm run example && npm pack --dry-run --json --cache ./.npm-cache"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["ai", "tool-call", "budget", "audit", "stream", "agent"],
+  "license": "MIT",
+  "author": "Huzaifa Asif",
+  "repository": { "type": "git", "url": "git+https://github.com/Huzaifa-Asif/tool-call-budget-audit.git" },
+  "bugs": { "url": "https://github.com/Huzaifa-Asif/tool-call-budget-audit/issues" },
+  "homepage": "https://github.com/Huzaifa-Asif/tool-call-budget-audit#readme",
+  "publishConfig": { "access": "public" }
+}
